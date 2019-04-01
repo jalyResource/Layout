@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Layout_Example' do
+  pod 'Layout', :path => '../'
+
+  target 'Layout_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

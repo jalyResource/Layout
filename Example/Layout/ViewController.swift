@@ -10,9 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblGray: UILabel!
+    
+    @IBOutlet weak var lblRed: UILabel!
+    
+    var testView: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+//        NSLayoutConstraint(item: view, attribute: .top, relatedBy: <#T##NSLayoutRelation#>, toItem: <#T##Any?#>, attribute: <#T##NSLayoutAttribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
+        
+        lblGray.jl.makeConstraints { (make) in
+            make.top
+            make.left
+            // make.top.equalToSuperview().offset(100)
+        }
+        /*
+         tableView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(kTopSafeArea)
+            make.left.right.bottom.equalTo(view).offset(0)
+         }*/
     }
 
     override func didReceiveMemoryWarning() {

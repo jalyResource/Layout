@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4B8E28225207E200ADB47C /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B8E27225207E200ADB47C /* ConstraintView.swift */; };
+		0A4B8E2A2252081A00ADB47C /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B8E292252081A00ADB47C /* ConstraintViewDSL.swift */; };
+		0A4B8E2C22520A0C00ADB47C /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B8E2B22520A0C00ADB47C /* ConstraintMaker.swift */; };
+		0A4B8E2E22520F4100ADB47C /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B8E2D22520F4100ADB47C /* ConstraintDescription.swift */; };
+		0A4B8E3022520FFD00ADB47C /* ConstraintLayoutAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B8E2F22520FFD00ADB47C /* ConstraintLayoutAttribute.swift */; };
+		0A4B8E322252151900ADB47C /* LayoutRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B8E312252151900ADB47C /* LayoutRelation.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,8 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A4B8E27225207E200ADB47C /* ConstraintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintView.swift; sourceTree = "<group>"; };
+		0A4B8E292252081A00ADB47C /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintViewDSL.swift; sourceTree = "<group>"; };
+		0A4B8E2B22520A0C00ADB47C /* ConstraintMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
+		0A4B8E2D22520F4100ADB47C /* ConstraintDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
+		0A4B8E2F22520FFD00ADB47C /* ConstraintLayoutAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutAttribute.swift; sourceTree = "<group>"; };
+		0A4B8E312252151900ADB47C /* LayoutRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutRelation.swift; sourceTree = "<group>"; };
 		22931476C05F0EA611992752 /* Pods_Layout_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Layout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ADA45431E0627D5E757D50F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3ADA45431E0627D5E757D50F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		467F5249B32CADCD0FAB2D5A /* Pods-Layout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Layout_Example.release.xcconfig"; path = "Target Support Files/Pods-Layout_Example/Pods-Layout_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Layout_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Layout_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,9 +53,9 @@
 		607FACE51AFB9204008FA782 /* Layout_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Layout_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		65D469B8CBC8D65C7F0109AF /* Layout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Layout.podspec; path = ../Layout.podspec; sourceTree = "<group>"; };
+		65D469B8CBC8D65C7F0109AF /* Layout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Layout.podspec; path = ../Layout.podspec; sourceTree = "<group>"; };
 		6CC876B5942A24BD1F027C36 /* Pods-Layout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Layout_Example.debug.xcconfig"; path = "Target Support Files/Pods-Layout_Example/Pods-Layout_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		76D0480EF43C27E34EDEBC0B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		76D0480EF43C27E34EDEBC0B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7C50ABC45BBDD793A541C55B /* Pods_Layout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Layout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D703145E7FEAFE313518CD60 /* Pods-Layout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Layout_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Layout_Tests/Pods-Layout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF9B8FC25625B76DCA616185 /* Pods-Layout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Layout_Tests.release.xcconfig"; path = "Target Support Files/Pods-Layout_Tests/Pods-Layout_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +81,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A4B8E202251C52000ADB47C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				0A4B8E27225207E200ADB47C /* ConstraintView.swift */,
+				0A4B8E292252081A00ADB47C /* ConstraintViewDSL.swift */,
+				0A4B8E2B22520A0C00ADB47C /* ConstraintMaker.swift */,
+				0A4B8E2D22520F4100ADB47C /* ConstraintDescription.swift */,
+				0A4B8E2F22520FFD00ADB47C /* ConstraintLayoutAttribute.swift */,
+				0A4B8E312252151900ADB47C /* LayoutRelation.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +123,7 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				0A4B8E202251C52000ADB47C /* Layout */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for Layout";
@@ -147,7 +173,6 @@
 				D703145E7FEAFE313518CD60 /* Pods-Layout_Tests.debug.xcconfig */,
 				FF9B8FC25625B76DCA616185 /* Pods-Layout_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +252,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -335,8 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4B8E28225207E200ADB47C /* ConstraintView.swift in Sources */,
+				0A4B8E2C22520A0C00ADB47C /* ConstraintMaker.swift in Sources */,
+				0A4B8E2A2252081A00ADB47C /* ConstraintViewDSL.swift in Sources */,
+				0A4B8E322252151900ADB47C /* LayoutRelation.swift in Sources */,
+				0A4B8E3022520FFD00ADB47C /* ConstraintLayoutAttribute.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				0A4B8E2E22520F4100ADB47C /* ConstraintDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

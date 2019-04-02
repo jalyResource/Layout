@@ -26,8 +26,6 @@ enum ConstraintRelation {
             relation = .equal
         case .greaterThanOrEqual:
             relation = .greaterThanOrEqual
-        default:
-            relation = .equal
         }
         
         return relation

@@ -29,18 +29,18 @@ class ViewController: UIViewController {
         
         lblGray.jl.makeConstraints { (make) in
             make.top.equalTo(100)
-            make.left.equalToSuperview()
+            make.left.equalToSuperview().offset(10)
         }
         
+        view.bringSubview(toFront: lblRed)
+        
         lblRed.jl.makeConstraints { (make) in
-            
-            make.top.equalTo(lblGray.jl.bottom).offset(10)
-            make.left.equalTo(lblGray)
-            // make.right.equalTo(-10)
-//            make.left.equalTo(lblGray.jl.right).offset(10)
-            // make.bottom.equalTo(-30)
-            // make.top.equalTo(lblGray.jl.top) // .offset(10)
-            // make.centerY.equalTo(lblGray)
+            make.top.equalTo(lblGray)
+            make.left.equalTo(lblGray.jl.right).offset(1)
+//            make.width.equalTo(200)
+            make.width.equalTo(lblGray).offset(100)
+            make.height.equalTo(lblGray).offset(2)
+//            make.wid
         }
         
         /*

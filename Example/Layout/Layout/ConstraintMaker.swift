@@ -27,6 +27,14 @@ class ConstraintMaker {
         return makeConstraintmakerRelatable(.bottom)
     }
     
+    var width: ConstraintMakerRelatable {
+        return makeConstraintmakerRelatable(.width)
+    }
+    
+    var height: ConstraintMakerRelatable {
+        return makeConstraintmakerRelatable(.height)
+    }
+    
     var centerY: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.centerY)
     }

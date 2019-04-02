@@ -39,11 +39,26 @@ public final class Constraint {
         
         let fromAttr = from.attribute.layoutAttribute()
         
-        let toView = to.item ?? fromView.superview
-        var toAttr = to.attribute.layoutAttribute()
-        if toAttr == .notAnAttribute {
-            toAttr = fromAttr
+        var toView: ConstraintView?
+        var toAttr: NSLayoutAttribute 
+        
+        if (from.attribute.contains(.width) || from.attribute.contains(.height)) &&
+            to.item == nil {
+            toView = nil
+            toAttr = .notAnAttribute
+        } else {
+            // to.attribute.layoutAttribute()
+            toView = to.item ?? fromView.superview
+            toAttr = to.attribute.layoutAttribute()
+            
+            if toAttr == .notAnAttribute {
+                toAttr = fromAttr
+            }
         }
+            
+         
+        
+        
         
         let relation = self.relation.layoutRelation
         

@@ -42,7 +42,7 @@ class ConstraintMakerRelatable {
         self.description = description
     }
     
-    func relatedTo(_ other: ConstraintRelatableTarget, relation: ConstraintRelation) -> ConstraintMakerEditable {
+    private func relatedTo(_ other: ConstraintRelatableTarget, relation: ConstraintRelation) -> ConstraintMakerEditable {
         
         let related: ConstraintItem
         let constant: ConstraintConstantTarget

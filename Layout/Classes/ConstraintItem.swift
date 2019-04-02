@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ConstraintItem {
+public class ConstraintItem {
     
     let item: ConstraintView?
     let attribute: ConstraintLayoutAttribute

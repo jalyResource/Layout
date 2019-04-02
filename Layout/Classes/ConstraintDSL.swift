@@ -9,11 +9,11 @@
 import Foundation
 
 
-protocol ConstraintDSL {
+public protocol ConstraintDSL {
     var target: ConstraintView? { get }
 }
 
-protocol ConstraintBaseAttributeDSL: ConstraintDSL {
+public protocol ConstraintBaseAttributeDSL: ConstraintDSL {
     
 }
 
@@ -54,7 +54,7 @@ extension ConstraintBaseAttributeDSL {
     
 }
 
-protocol ConstraintAttributeDSL: ConstraintBaseAttributeDSL {
+public protocol ConstraintAttributeDSL: ConstraintBaseAttributeDSL {
 }
 
 extension ConstraintAttributeDSL {

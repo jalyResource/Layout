@@ -11,15 +11,15 @@ import Foundation
 
 public struct ConstraintViewDSL: ConstraintAttributeDSL {
     
-    func makeConstraints(_ closure: (_ make: ConstraintMaker) -> ()) {
+    public func makeConstraints(_ closure: (_ make: ConstraintMaker) -> ()) {
         ConstraintMaker.makeConstraint(self.item, closure: closure)
     }
     
-    func updateConstraints(_ closure: (_ make: ConstraintMaker) -> ()) {
+    public func updateConstraints(_ closure: (_ make: ConstraintMaker) -> ()) {
         ConstraintMaker.updateConstraint(self.item, closure: closure)
     }
     
-    func remakeConstraints(_ closure: (_ make: ConstraintMaker) -> ()) {
+    public func remakeConstraints(_ closure: (_ make: ConstraintMaker) -> ()) {
         ConstraintMaker.remakeConstraint(self.item, closure: closure)
     }
     
@@ -30,7 +30,7 @@ public struct ConstraintViewDSL: ConstraintAttributeDSL {
         self.item = item
     }
     
-    var target: ConstraintView? {
+    public var target: ConstraintView? {
         return self.item
     }
 }

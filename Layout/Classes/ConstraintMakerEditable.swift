@@ -9,14 +9,14 @@
 import UIKit
 
 
-class ConstraintMakerEditable {
+public class ConstraintMakerEditable {
     let description: ConstraintDescription
     
     init(_ description: ConstraintDescription) {
         self.description = description
     }
     
-    func offset(_ value: ConstraintOffsetTarget) -> Void {
+    public func offset(_ value: ConstraintOffsetTarget) -> Void {
         description.constant = value.constraintOffsetTargetValue
     }
     
@@ -24,7 +24,7 @@ class ConstraintMakerEditable {
 
 
 
-protocol ConstraintOffsetTarget {
+public protocol ConstraintOffsetTarget {
 }
 
 extension Int: ConstraintOffsetTarget {

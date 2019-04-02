@@ -21,24 +21,24 @@ struct ConstraintLayoutAttribute: OptionSet, ExpressibleByIntegerLiteral {
     }
     
     
-    static var none : ConstraintLayoutAttribute { return 0 }
-    static var left : ConstraintLayoutAttribute { return 1 }
-    static var top : ConstraintLayoutAttribute { return 2 }
-    static var right : ConstraintLayoutAttribute { return 4 }
-    static var bottom : ConstraintLayoutAttribute { return 8 }
+    public static var none : ConstraintLayoutAttribute { return 0 }
+    public static var left : ConstraintLayoutAttribute { return 1 }
+    public static var top : ConstraintLayoutAttribute { return 2 }
+    public static var right : ConstraintLayoutAttribute { return 4 }
+    public static var bottom : ConstraintLayoutAttribute { return 8 }
     
-    static var width : ConstraintLayoutAttribute { return 16 }
-    static var height : ConstraintLayoutAttribute { return 32 }
+    public static var width : ConstraintLayoutAttribute { return 16 }
+    public static var height : ConstraintLayoutAttribute { return 32 }
     
-    static var centerX : ConstraintLayoutAttribute { return 64 }
-    static var centerY : ConstraintLayoutAttribute { return 128 }
+    public static var centerX : ConstraintLayoutAttribute { return 64 }
+    public static var centerY : ConstraintLayoutAttribute { return 128 }
     
     
     // aggregates
-    static var center : ConstraintLayoutAttribute { return 192 }
+    public static var center : ConstraintLayoutAttribute { return 192 }
     // 
-    static var size: ConstraintLayoutAttribute { return 48 }
-    static var edges: ConstraintLayoutAttribute { return 15 }
+    public static var size: ConstraintLayoutAttribute { return 48 }
+    public static var edges: ConstraintLayoutAttribute { return 15 }
     
     
     func layoutAttribute() -> [NSLayoutAttribute] {

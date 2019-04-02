@@ -9,45 +9,45 @@
 import Foundation
 
 
-class ConstraintMaker {
+public class ConstraintMaker {
     
-    var top: ConstraintMakerRelatable {
+    public var top: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.top)
     }
     
-    var left: ConstraintMakerRelatable {
+    public var left: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.left)
     }
     
-    var right: ConstraintMakerRelatable {
+    public var right: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.right)
     }
     
-    var bottom: ConstraintMakerRelatable {
+    public var bottom: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.bottom)
     }
     
-    var width: ConstraintMakerRelatable {
+    public var width: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.width)
     }
     
-    var height: ConstraintMakerRelatable {
+    public var height: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.height)
     }
     
-    var size: ConstraintMakerRelatable {
+    public var size: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.size)
     }
     
-    var centerY: ConstraintMakerRelatable {
+    public var centerY: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.centerY)
     }
     
-    var centerX: ConstraintMakerRelatable {
+    public var centerX: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.centerX)
     }
     
-    var center: ConstraintMakerRelatable {
+    public var center: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.center)
     }
     

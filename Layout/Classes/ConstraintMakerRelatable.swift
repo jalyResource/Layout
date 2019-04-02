@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ConstraintRelatableTarget {
+public protocol ConstraintRelatableTarget {
 }
 
 extension UInt: ConstraintRelatableTarget {
@@ -38,7 +38,7 @@ extension ConstraintView: ConstraintRelatableTarget {
 }
 
 
-class ConstraintMakerRelatable {
+public class ConstraintMakerRelatable {
     let description: ConstraintDescription
     
     init(_ description: ConstraintDescription) {
@@ -75,12 +75,12 @@ class ConstraintMakerRelatable {
     }
     
     @discardableResult
-    func equalTo(_ other: ConstraintRelatableTarget) -> ConstraintMakerEditable {
+    public func equalTo(_ other: ConstraintRelatableTarget) -> ConstraintMakerEditable {
         return self.relatedTo(other, relation: .equal)
     }   
     
     @discardableResult
-    func equalToSuperview() -> ConstraintMakerEditable {
+    public func equalToSuperview() -> ConstraintMakerEditable {
         guard let superView = description.fromView.superview else {
             fatalError("Exception superview but found nil when attemping make constraint `equalToSuperview`")
         }

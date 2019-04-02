@@ -31,6 +31,17 @@ extension ConstraintBaseAttributeDSL {
     public var bottom: ConstraintItem {
         return ConstraintItem(self.target, attribute: .bottom)
     }
+    
+    public var width: ConstraintItem {
+        return ConstraintItem(self.target, attribute: .width)
+    }
+    public var height: ConstraintItem {
+        return ConstraintItem(self.target, attribute: .height)
+    }
+    public var size: ConstraintItem {
+        return ConstraintItem(self.target, attribute: .size)
+    }
+    
     public var centerX: ConstraintItem {
         return ConstraintItem(self.target, attribute: .centerX)
     }

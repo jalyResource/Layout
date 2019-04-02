@@ -35,6 +35,10 @@ class ConstraintMaker {
         return makeConstraintmakerRelatable(.height)
     }
     
+    var size: ConstraintMakerRelatable {
+        return makeConstraintmakerRelatable(.size)
+    }
+    
     var centerY: ConstraintMakerRelatable {
         return makeConstraintmakerRelatable(.centerY)
     }

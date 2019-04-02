@@ -41,7 +41,7 @@ struct ConstraintLayoutAttribute: OptionSet, ExpressibleByIntegerLiteral {
     static var edges: ConstraintLayoutAttribute { return 15 }
     
     
-    func layoutAttribute() -> NSLayoutAttribute {
+    func layoutAttribute() -> [NSLayoutAttribute] {
         var attrs = [NSLayoutAttribute]()
         
         if self.contains(.left) {
@@ -70,7 +70,7 @@ struct ConstraintLayoutAttribute: OptionSet, ExpressibleByIntegerLiteral {
             attrs.append(.centerY)
         }
         
-        return attrs.first ?? .notAnAttribute
+        return attrs
     }
     
     

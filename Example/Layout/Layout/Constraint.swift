@@ -36,35 +36,38 @@ public final class Constraint {
         guard let fromView = from.item else {
             fatalError("from view is nil while activeIfNeeded")
         }
-        
-        let fromAttr = from.attribute.layoutAttribute()
-        
         var toView: ConstraintView?
-        var toAttr: NSLayoutAttribute 
-        
         if (from.attribute.contains(.width) || from.attribute.contains(.height)) &&
             to.item == nil {
             toView = nil
-            toAttr = .notAnAttribute
         } else {
             // to.attribute.layoutAttribute()
             toView = to.item ?? fromView.superview
-            toAttr = to.attribute.layoutAttribute()
-            
-            if toAttr == .notAnAttribute {
-                toAttr = fromAttr
-            }
         }
+        
+        let fromAttrs = from.attribute.layoutAttribute()
+        var toAttrs = to.attribute.layoutAttribute()
+        let attsNumberEqual = fromAttrs.count == toAttrs.count
+        
+        
+        for fromAttr in fromAttrs {
+            var toAttr: NSLayoutAttribute
             
-         
-        
-        
-        
-        let relation = self.relation.layoutRelation
-        
-        let constant = self.constant.constraintConstantTargetValueFor(LayoutAttribute: fromAttr)
-        
-         let constraint = NSLayoutConstraint(item: fromView, attribute: fromAttr, relatedBy:  relation, toItem: toView, attribute: toAttr, multiplier: self.multiplier, constant: constant)
-        constraint.isActive = true
+            if nil == toView {
+                toAttr = .notAnAttribute
+            } else { // to.attribute.layoutAttribute()
+                if attsNumberEqual {
+                    toAttr = toAttrs[fromAttrs.index(of: fromAttr)!]
+                } else {
+                    toAttr = fromAttr
+                }
+            }
+            
+            let relation = self.relation.layoutRelation
+            let constant = self.constant.constraintConstantTargetValueFor(layoutAttribute: fromAttr)
+            
+            let constraint = NSLayoutConstraint(item: fromView, attribute: fromAttr, relatedBy:  relation, toItem: toView, attribute: toAttr, multiplier: self.multiplier, constant: constant)
+            constraint.isActive = true
+        }
     }
 }

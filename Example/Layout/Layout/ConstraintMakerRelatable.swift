@@ -28,6 +28,9 @@ extension Double: ConstraintRelatableTarget {
 extension CGFloat: ConstraintRelatableTarget {
 }
 
+extension CGSize: ConstraintRelatableTarget {
+}
+
 extension ConstraintItem: ConstraintRelatableTarget {
 }
 

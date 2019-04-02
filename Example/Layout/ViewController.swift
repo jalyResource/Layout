@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblGray: UILabel!
     
     @IBOutlet weak var lblRed: UILabel!
+    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var yellowView: UIView!
+    
     
     var testView: UIView?
     
@@ -25,11 +28,11 @@ class ViewController: UIViewController {
         
         lblRed.layer.borderColor = UIColor.black.cgColor
         lblRed.layer.borderWidth = 1
-//        NSLayoutConstraint(item: view, attribute: .top, relatedBy: <#T##NSLayoutRelation#>, toItem: <#T##Any?#>, attribute: <#T##NSLayoutAttribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
         
         lblGray.jl.makeConstraints { (make) in
             make.top.equalTo(100)
             make.left.equalToSuperview().offset(10)
+            make.size.equalTo(CGSize(width: 120, height: 30))
         }
         
         view.bringSubview(toFront: lblRed)
@@ -37,17 +40,20 @@ class ViewController: UIViewController {
         lblRed.jl.makeConstraints { (make) in
             make.top.equalTo(lblGray)
             make.left.equalTo(lblGray.jl.right).offset(1)
-//            make.width.equalTo(200)
-            make.width.equalTo(lblGray).offset(100)
-            make.height.equalTo(lblGray).offset(2)
-//            make.wid
+            make.size.equalTo(lblGray)
         }
         
-        /*
-         tableView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(kTopSafeArea)
-            make.left.right.bottom.equalTo(view).offset(0)
-         }*/
+        greenView.jl.makeConstraints { (make) in
+            make.left.equalTo(lblGray)
+            make.top.equalTo(lblGray.jl.bottom).offset(10)
+            make.size.equalTo(CGSize(width: 90, height: 60))
+        }
+        
+        yellowView.jl.makeConstraints { (make) in
+            make.left.equalTo(greenView.jl.right)
+            make.centerY.equalTo(greenView)
+            make.size.equalTo(greenView)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,28 +12,26 @@ protocol ConstraintConstantTarget {
 }
 
 extension Int: ConstraintConstantTarget {
-    
 }
 
 extension UInt: ConstraintConstantTarget {
-    
 }
 
 extension Float: ConstraintConstantTarget {
-    
 }
 
 extension Double: ConstraintConstantTarget {
-    
 }
 
 extension CGFloat: ConstraintConstantTarget {
-    
+}
+
+extension CGSize: ConstraintConstantTarget {
 }
 
 extension ConstraintConstantTarget {
     
-    func constraintConstantTargetValueFor(LayoutAttribute: NSLayoutAttribute) -> CGFloat {
+    func constraintConstantTargetValueFor(layoutAttribute: NSLayoutAttribute) -> CGFloat {
         if let value = self as? CGFloat {
             return value
         }
@@ -48,6 +46,13 @@ extension ConstraintConstantTarget {
         }
         if let value = self as? Int {
             return CGFloat(value)
+        }
+        if let value = self as? CGSize {
+            if layoutAttribute == .width {
+                return CGFloat(value.width)
+            } else {
+                return CGFloat(value.height)
+            }
         }
         
         return 0.0

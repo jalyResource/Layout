@@ -28,6 +28,11 @@ class ViewController: UIViewController {
             // make.left.equalToSuperview().offset(12)
         }
         
+        lblRed.jl.makeConstraints { (make) in
+            make.left.equalTo(10)
+            make.top.equalTo(300)
+        }
+        
         /*
          tableView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(kTopSafeArea)

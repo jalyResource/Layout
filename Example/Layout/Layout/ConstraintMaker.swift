@@ -24,9 +24,34 @@ class ConstraintMaker {
         return ConstraintMakerRelatable(description)
     }
     
-    static func makeConstraint(_ item: ConstraintView, closure: (_ make: ConstraintMaker) -> ()) {
+    
+    func prepare() -> Void {
+        self.item.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    
+    
+    internal static func prepareConstraints(_ item: ConstraintView, closure: (_ make: ConstraintMaker) -> ()) -> [Constraint] {
         let maker = ConstraintMaker(item)
         closure(maker)
+        var constraints = [Constraint]()
+        
+        for desctiption in maker.descriptions {
+            if let constraint = desctiption.constraint {
+                constraints.append(constraint)
+            }
+        }
+        
+        return constraints
+    }
+    
+    
+    static func makeConstraint(_ item: ConstraintView, closure: (_ make: ConstraintMaker) -> ()) {
+        let constraints = prepareConstraints(item, closure: closure)
+        
+        for constraint in constraints {
+            constraint.activeIfNeeded()
+        }
     }
     
     
@@ -35,5 +60,6 @@ class ConstraintMaker {
     let item: ConstraintView
     init(_ item: ConstraintView) {
         self.item = item
+        self.prepare()
     }
 }

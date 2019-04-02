@@ -59,9 +59,6 @@ class ConstraintMaker {
     }
     
     
-    func prepare() -> Void {
-        self.item.translatesAutoresizingMaskIntoConstraints = false
-    }
     
     
     
@@ -84,16 +81,29 @@ class ConstraintMaker {
         let constraints = prepareConstraints(item, closure: closure)
         
         for constraint in constraints {
-            constraint.activeIfNeeded()
+            constraint.activeIfNeeded(needUpdate: false)
         }
     }
     
+    
+    static func updateConstraint(_ item: ConstraintView, closure: (_ make: ConstraintMaker) -> ()) {
+        guard item.arrConstraints.count > 0 else {
+            makeConstraint(item, closure: closure)
+            return
+        }
+        
+        let constraints = prepareConstraints(item, closure: closure)
+        
+        for constraint in constraints {
+            constraint.activeIfNeeded(needUpdate: true)
+        }
+    }
     
     var descriptions: [ConstraintDescription] = []
     
     let item: ConstraintView
     init(_ item: ConstraintView) {
         self.item = item
-        self.prepare()
+        self.item.prepare()
     }
 }

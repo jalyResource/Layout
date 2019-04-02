@@ -69,12 +69,20 @@ class ViewController: UIViewController {
             make.centerY.equalTo(lblCenterXY.jl.bottom).offset(2)
             make.centerX.equalTo(lblCenterXY)
         }
+
+        lblCenterY.jl.updateConstraints { (make) in
+            make.centerY.equalTo(lblCenterXY.jl.bottom).offset(30)
+        }
+        
+        
         
         lblCenter.jl.makeConstraints { (make) in
             make.center.equalTo(greenView.jl.center)
             make.height.equalTo(39)
         }
-        
+        lblCenter.jl.updateConstraints { (make) in
+            make.height.equalTo(70)
+        }
     }
 
     override func didReceiveMemoryWarning() {

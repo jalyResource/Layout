@@ -52,7 +52,7 @@ class ConstraintMakerRelatable {
             related = other
             constant = 0.0
         } else if let view = other as? ConstraintView {  // 第二做
-            related = ConstraintItem(nil, attribute: .none)
+            related = ConstraintItem(view, attribute: .none)
             constant = 0.0
         } else if let constantValue = other as? ConstraintConstantTarget { // 1
             related = ConstraintItem(nil, attribute: .none)

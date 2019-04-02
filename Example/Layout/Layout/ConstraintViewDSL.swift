@@ -9,7 +9,7 @@
 import Foundation
 
 
-public struct ConstraintViewDSL {
+public struct ConstraintViewDSL: ConstraintAttributeDSL {
     
     func makeConstraints(_ closure: (_ make: ConstraintMaker) -> ()) {
         ConstraintMaker.makeConstraint(self.item, closure: closure)
@@ -20,5 +20,9 @@ public struct ConstraintViewDSL {
     
     init(_ item: ConstraintView) {
         self.item = item
+    }
+    
+    var target: ConstraintView? {
+        return self.item
     }
 }

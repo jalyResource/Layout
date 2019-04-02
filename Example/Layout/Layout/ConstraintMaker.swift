@@ -27,6 +27,14 @@ class ConstraintMaker {
         return makeConstraintmakerRelatable(.bottom)
     }
     
+    var centerY: ConstraintMakerRelatable {
+        return makeConstraintmakerRelatable(.centerY)
+    }
+    
+    var centerX: ConstraintMakerRelatable {
+        return makeConstraintmakerRelatable(.centerX)
+    }
+    
     
     private func makeConstraintmakerRelatable(_ attribute: ConstraintLayoutAttribute) -> ConstraintMakerRelatable {
         let description = ConstraintDescription(self.item, attribute: attribute)

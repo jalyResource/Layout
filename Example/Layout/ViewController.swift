@@ -20,16 +20,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        lblGray.layer.borderColor = UIColor.black.cgColor
+        lblGray.layer.borderWidth = 1
+        
+        lblRed.layer.borderColor = UIColor.black.cgColor
+        lblRed.layer.borderWidth = 1
 //        NSLayoutConstraint(item: view, attribute: .top, relatedBy: <#T##NSLayoutRelation#>, toItem: <#T##Any?#>, attribute: <#T##NSLayoutAttribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
         
         lblGray.jl.makeConstraints { (make) in
             make.top.equalTo(100)
-            make.left.equalTo(100)
+            make.left.equalToSuperview()
         }
         
         lblRed.jl.makeConstraints { (make) in
-            make.right.equalTo(-10)
-            make.bottom.equalTo(-30)
+            
+            make.top.equalTo(lblGray.jl.bottom).offset(10)
+            make.left.equalTo(lblGray)
+            // make.right.equalTo(-10)
+//            make.left.equalTo(lblGray.jl.right).offset(10)
+            // make.bottom.equalTo(-30)
+            // make.top.equalTo(lblGray.jl.top) // .offset(10)
+            // make.centerY.equalTo(lblGray)
         }
         
         /*

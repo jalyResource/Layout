@@ -25,12 +25,11 @@ class ViewController: UIViewController {
         lblGray.jl.makeConstraints { (make) in
             make.top.equalTo(100)
             make.left.equalTo(100)
-            // make.left.equalToSuperview().offset(12)
         }
         
         lblRed.jl.makeConstraints { (make) in
-            make.left.equalTo(10)
-            make.top.equalTo(300)
+            make.right.equalTo(-10)
+            make.bottom.equalTo(-30)
         }
         
         /*

@@ -11,15 +11,25 @@ import Foundation
 
 class ConstraintMaker {
     
-    // make.top.equalToSuperview().offset(100)
     var top: ConstraintMakerRelatable {
-        let description = ConstraintDescription(self.item, attribute: .top)
-        descriptions.append(description)
-        return ConstraintMakerRelatable(description)
+        return makeConstraintmakerRelatable(.top)
     }
     
     var left: ConstraintMakerRelatable {
-        let description = ConstraintDescription(self.item, attribute: .left)
+        return makeConstraintmakerRelatable(.left)
+    }
+    
+    var right: ConstraintMakerRelatable {
+        return makeConstraintmakerRelatable(.right)
+    }
+    
+    var bottom: ConstraintMakerRelatable {
+        return makeConstraintmakerRelatable(.bottom)
+    }
+    
+    
+    private func makeConstraintmakerRelatable(_ attribute: ConstraintLayoutAttribute) -> ConstraintMakerRelatable {
+        let description = ConstraintDescription(self.item, attribute: attribute)
         descriptions.append(description)
         return ConstraintMakerRelatable(description)
     }

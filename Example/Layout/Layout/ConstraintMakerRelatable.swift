@@ -71,10 +71,12 @@ class ConstraintMakerRelatable {
         return ConstraintMakerEditable(description)
     }
     
+    @discardableResult
     func equalTo(_ other: ConstraintRelatableTarget) -> ConstraintMakerEditable {
         return self.relatedTo(other, relation: .equal)
     }   
     
+    @discardableResult
     func equalToSuperview() -> ConstraintMakerEditable {
         guard let superView = description.fromView.superview else {
             fatalError("Exception superview but found nil when attemping make constraint `equalToSuperview`")

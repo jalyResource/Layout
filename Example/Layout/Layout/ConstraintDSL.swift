@@ -48,6 +48,9 @@ extension ConstraintBaseAttributeDSL {
     public var centerY: ConstraintItem {
         return ConstraintItem(self.target, attribute: .centerY)
     }
+    public var center: ConstraintItem {
+        return ConstraintItem(self.target, attribute: .center)
+    }
     
 }
 

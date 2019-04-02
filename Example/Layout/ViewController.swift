@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenView: UIView!
     @IBOutlet weak var yellowView: UIView!
     
+    @IBOutlet weak var lblCenterXY: UILabel!
+    @IBOutlet weak var lblCenter: UILabel!
+    @IBOutlet weak var lblCenterY: UILabel!
     
     var testView: UIView?
     
@@ -54,6 +57,24 @@ class ViewController: UIViewController {
             make.centerY.equalTo(greenView)
             make.size.equalTo(greenView)
         }
+        
+        view.bringSubview(toFront: lblCenterXY)
+        lblCenterXY.jl.makeConstraints { (make) in
+            make.centerX.equalTo(yellowView)
+            make.centerY.equalTo(yellowView)
+        }
+        
+        view.bringSubview(toFront: lblCenterY)
+        lblCenterY.jl.makeConstraints { (make) in
+            make.centerY.equalTo(lblCenterXY.jl.bottom).offset(2)
+            make.centerX.equalTo(lblCenterXY)
+        }
+        
+        lblCenter.jl.makeConstraints { (make) in
+            make.center.equalTo(greenView.jl.center)
+            make.height.equalTo(39)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

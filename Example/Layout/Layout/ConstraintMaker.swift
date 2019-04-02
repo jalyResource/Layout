@@ -85,7 +85,6 @@ class ConstraintMaker {
         }
     }
     
-    
     static func updateConstraint(_ item: ConstraintView, closure: (_ make: ConstraintMaker) -> ()) {
         guard item.arrConstraints.count > 0 else {
             makeConstraint(item, closure: closure)
@@ -97,6 +96,12 @@ class ConstraintMaker {
         for constraint in constraints {
             constraint.activeIfNeeded(needUpdate: true)
         }
+    }
+    
+    static func remakeConstraint(_ item: ConstraintView, closure: (_ make: ConstraintMaker) -> ()) {
+        item.removeAllConstraint()
+        
+        self.makeConstraint(item, closure: closure)
     }
     
     var descriptions: [ConstraintDescription] = []

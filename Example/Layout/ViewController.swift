@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblCenter: UILabel!
     @IBOutlet weak var lblCenterY: UILabel!
     
+    @IBOutlet weak var lblRemake: UILabel!
+    
+    @IBOutlet weak var lblRemake2: UILabel!
+    
     var testView: UIView?
     
     override func viewDidLoad() {
@@ -82,6 +86,24 @@ class ViewController: UIViewController {
         }
         lblCenter.jl.updateConstraints { (make) in
             make.height.equalTo(70)
+        }
+        
+        // test remake
+        lblRemake.jl.makeConstraints { (make) in
+            make.left.equalTo(lblCenter)
+            make.top.equalTo(lblCenter).offset(100)
+        }
+        lblRemake.jl.remakeConstraints { (make) in
+            make.left.equalTo(lblCenterY)
+            make.top.equalTo(lblCenterY.jl.bottom).offset(10)
+        }
+        
+        lblRemake2.jl.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
+        lblRemake2.jl.remakeConstraints { (make) in
+            make.centerX.equalTo(lblRemake)
+            make.top.equalTo(lblRemake.jl.bottom)
         }
     }
 

@@ -32,7 +32,18 @@ extension LayoutConstraintItem {
         setConstraint.add(constraint)
     }
     
+    func removeAllConstraint() -> Void {
+        let arrConstraint = self.arrConstraints
+        
+        for constraint in arrConstraint {
+            constraint.uninstall()
+        }
+        
+        setConstraint.removeAllObjects()
+    }
+    
     func remove(_ constraint: Constraint) -> Void {
+        constraint.uninstall()
         setConstraint.remove(constraint)
     }
     

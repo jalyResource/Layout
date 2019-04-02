@@ -19,6 +19,10 @@ public struct ConstraintViewDSL: ConstraintAttributeDSL {
         ConstraintMaker.updateConstraint(self.item, closure: closure)
     }
     
+    func remakeConstraints(_ closure: (_ make: ConstraintMaker) -> ()) {
+        ConstraintMaker.remakeConstraint(self.item, closure: closure)
+    }
+    
     
     internal let item: ConstraintView
     

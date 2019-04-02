@@ -102,4 +102,12 @@ public final class Constraint {
             from.item?.add(self)
         }
     }
+    
+    internal func uninstall() {
+        let layoutConstraints = self.layoutConstraints
+        
+        for constraint in layoutConstraints {
+            constraint.isActive = false
+        }
+    }
 }

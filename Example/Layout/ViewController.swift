@@ -23,10 +23,11 @@ class ViewController: UIViewController {
 //        NSLayoutConstraint(item: view, attribute: .top, relatedBy: <#T##NSLayoutRelation#>, toItem: <#T##Any?#>, attribute: <#T##NSLayoutAttribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
         
         lblGray.jl.makeConstraints { (make) in
-            make.top
-            make.left
-            // make.top.equalToSuperview().offset(100)
+            make.top.equalTo(100)
+            make.left.equalTo(100)
+            // make.left.equalToSuperview().offset(12)
         }
+        
         /*
          tableView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(kTopSafeArea)

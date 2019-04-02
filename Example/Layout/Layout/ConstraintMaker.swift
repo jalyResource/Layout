@@ -12,14 +12,16 @@ import Foundation
 class ConstraintMaker {
     
     // make.top.equalToSuperview().offset(100)
-    var top: ConstraintMaker {
+    var top: ConstraintMakerRelatable {
         let description = ConstraintDescription(self.item, attribute: .top)
         descriptions.append(description)
-        return self
+        return ConstraintMakerRelatable(description)
     }
     
-    var left: ConstraintMaker {
-        return self
+    var left: ConstraintMakerRelatable {
+        let description = ConstraintDescription(self.item, attribute: .left)
+        descriptions.append(description)
+        return ConstraintMakerRelatable(description)
     }
     
     static func makeConstraint(_ item: ConstraintView, closure: (_ make: ConstraintMaker) -> ()) {

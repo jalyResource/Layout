@@ -19,7 +19,7 @@ class ConstraintDescription {
     
     var relation: ConstraintRelation = .equal
     var multiplier: CGFloat = 1.0
-    var constant: CGFloat = 0.0
+    var constant: ConstraintConstantTarget = 0.0
     
     
     init(_ item: ConstraintView, attribute: ConstraintLayoutAttribute) {

@@ -25,6 +25,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lblRemake2: UILabel!
     
+    @IBOutlet weak var lblChainSyntex: UILabel!
+    
+    @IBOutlet weak var viewContainer: UIView!
+    @IBOutlet weak var lblCenterXCenterY: UILabel!
+    
+    
     var testView: UIView?
     
     override func viewDidLoad() {
@@ -42,7 +48,7 @@ class ViewController: UIViewController {
             make.left.equalToSuperview().offset(10)
             make.size.equalTo(CGSize(width: 120, height: 30))
         }
-        
+            
         view.bringSubview(toFront: lblRed)
         
         lblRed.jl.makeConstraints { (make) in
@@ -105,6 +111,24 @@ class ViewController: UIViewController {
         lblRemake2.jl.remakeConstraints { (make) in
             make.centerX.equalTo(lblRemake)
             make.top.equalTo(lblRemake.jl.bottom)
+        }
+        
+        lblChainSyntex.alpha = 0.6
+        view.bringSubview(toFront: lblChainSyntex)
+        // chain syntex
+        lblChainSyntex.jl.makeConstraints { (make) in
+            make.left.top.equalTo(lblRemake2)// .offset(20)
+        }
+        
+        viewContainer.jl.makeConstraints { (make) in
+            make.centerX.centerY.equalToSuperview()
+            make.width.height.equalTo(300)
+        }
+        
+        lblCenterXCenterY.backgroundColor = UIColor.cyan
+        lblCenterXCenterY.jl.makeConstraints { (make) in
+            make.right.bottom.equalToSuperview().offset(-10)
+            make.width.equalTo(200)
         }
     }
 

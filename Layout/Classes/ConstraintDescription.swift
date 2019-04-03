@@ -12,7 +12,7 @@ import UIKit
 class ConstraintDescription {
     
     let fromView: ConstraintView
-    let fromAttribute: ConstraintLayoutAttribute
+    var fromAttribute: ConstraintLayoutAttribute
     
     var toView: ConstraintView?
     var toAttribute: ConstraintLayoutAttribute?

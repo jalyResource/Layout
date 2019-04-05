@@ -9,6 +9,31 @@
 
 仿 `SnapKit` 的布局框架。实现了`SnapKit`中常用功能。仅供参考，不推荐在项目里使用。
 
+## Usage
+和 `SnapKit` 用法如出一辙。ep：
+
+```
+lblGray.jl.makeConstraints { (make) in
+    make.top.equalTo(100)
+    make.left.equalToSuperview().offset(10)
+    make.size.equalTo(CGSize(width: 120, height: 30))
+}
+
+lblCenter.jl.makeConstraints { (make) in
+    make.center.equalTo(greenView.jl.center)
+    make.height.equalTo(39)
+}
+
+// chain syntex
+lblChainSyntex.jl.remakeConstraints { (make) in
+    make.left.top.equalTo(lblRemake2)// .offset(20)
+}
+
+viewContainer.jl.makeConstraints { (make) in
+    make.centerX.centerY.equalToSuperview()
+    make.width.height.equalTo(300)
+}
+```
 
 ## Author
 

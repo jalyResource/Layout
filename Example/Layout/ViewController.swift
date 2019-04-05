@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             make.left.equalToSuperview().offset(10)
             make.size.equalTo(CGSize(width: 120, height: 30))
         }
-            
+        
         view.bringSubview(toFront: lblRed)
         
         lblRed.jl.makeConstraints { (make) in

@@ -7,7 +7,7 @@
 
 ## Example
 
-仿 `SnapKit` 的布局框架。实现了`SnapKit`中常用功能。仅供参考，不推荐在项目里使用。
+仿 `SnapKit` 的布局框架。实现了`SnapKit`中常用功能。仅供参考。
 
 ## Usage
 和 `SnapKit` 用法如出一辙。ep：
